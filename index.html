@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photon Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <p>Photon Lab</p>
+            <div class="inputContainer">
+                <input type="file" placeholder="Upload an image">
+            </div>
+            <div class="feature-container">
+            <label for="brightness-input">Brightness</label>
+            <input type="range" min="0" max="200" value="100" 
+            id="brightness-input" class="slider">
+        </div>
+        <div class="feature-container">
+            <label for="contrast-input">Contrast</label>
+            <input type="range" min="0" max="200" value="100" 
+            id="contrast-input" class="slider">
+        </div>
+        <div class="feature-container">
+            <label for="saturation-input">Saturation</label>
+            <input type="range" min="0" max="200" value="100" 
+            id="saturation-input" class="slider">
+        </div>
+        <div class="feature-container">
+            <label for="blur-input">Blur</label>
+            <input type="range" min="0" max="200" value="0" 
+            id="blur-input" class="slider">
+        </div>
+        <div class="buttonsContainer">
+            <button class="btn">Grayscale</button>
+            <button class="btn">Sapia</button>
+            <button class="btn">Reset</button>
+
+        </div>
+        <div class="downloadImagecontainer">
+            <button class="downloadImgBtn">Download Image</button>
+        </div>
+        </div>
+        <div class="canvasContainer">
+
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+</body>
+</html>

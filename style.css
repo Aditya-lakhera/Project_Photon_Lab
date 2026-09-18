@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(44,43,43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 80%;
+    height: 80%;
+    border:solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.controls{
+    height: 100%;
+    width: 40%;
+    border:solid 1px red;
+}
+
+.canvasContainer{
+    height: 100%;
+    width: 60%;
+    border:solid 1px blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
