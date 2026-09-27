@@ -3,10 +3,10 @@ const ctx = canvas.getContext('2d');
 const fileInput = document.getElementById('fileInput');
 
 const img = new Image();
-// const brightnessInput = document.getElementById('brightness-input');
-// const contrastInput = document.getElementById('contrast-input');
-// const saturationInput = document.getElementById('saturation-input');
-// const blurInput = document.getElementById('blur-input');
+const brightnessInput = document.getElementById('brightness-input');
+const contrastInput = document.getElementById('contrast-input');
+const saturationInput = document.getElementById('saturation-input');
+const blurInput = document.getElementById('blur-input');
 
 fileInput.addEventListener('change', handleFileUpload);
 
@@ -17,8 +17,6 @@ function handleFileUpload(event) {
     const reader = new FileReader(); //Web API that allows you to read the contents of files stored on the user's computer asynchronously, using File or Blob objects to specify the file or data to read.
     reader.onload = () => {
         img.src = reader.result;
-        
-
     };
     reader.readAsDataURL(file);
 
@@ -28,5 +26,29 @@ function handleFileUpload(event) {
             ctx.drawImage(img, 0, 0,canvas.width,canvas.height);
         }
 }
+
+function applyFilters(){
+    brightnessValue = brightnessInput.value;
+    contrastValue = contrastInput.value;
+    saturationValue = saturationInput.value;
+    blurValue = blurInput.value;
+    
+    ctx.filter =`brightness(${brightnessValue}%)
+    contrast(${contrastValue}%)
+    saturate(${saturationValue}%)
+    blur(${blurValue}px)`;
+    
+
+    ctx.clearRect(0,0,canvas.width,canvas.hight);
+    ctx.drawImage(img,0,0,canvas.width,canvas.height);
+}
+
+
+brightnessInput.addEventListener("input",applyFilters)
+contrastInput.addEventListener("input",applyFilters);
+saturationInput.addEventListener("input",applyFilters);
+blurInput.addEventListener("input",applyFilters);
+
+
 
 
