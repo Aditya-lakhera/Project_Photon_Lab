@@ -1,3 +1,5 @@
 1)HTML AND CSS 
 2)Upload image from the input and display on the canvas.
 3)Create functionality for brightness,saturation,contrast and blur.
+4)Create grsayscale,sepia and reset button functionality.
+5)Set download image functionality
